@@ -1,0 +1,14 @@
+{
+  "name": "auth-token-expiry-exercise",
+  "version": "1.0.0",
+  "description": "Debug the auth token expiry bug exercise",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

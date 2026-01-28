@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f \"$CLAUDE_PROJECT_DIR/.claude/hooks/security-review-reminder.sh\" ]; then \"$CLAUDE_PROJECT_DIR/.claude/hooks/security-review-reminder.sh\" \"$CLAUDE_FILE_PATH\"; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
