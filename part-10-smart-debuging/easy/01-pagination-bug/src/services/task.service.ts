@@ -41,9 +41,8 @@ export function createTask(title: string, description: string): Task {
 export function getTasks(options: PaginationOptions): PaginatedResult<Task> {
   const { page, limit } = options;
 
-  // BUG: Incorrect skip calculation
-  // This calculates skip wrong, causing duplicate results
-  const skip = page * limit - limit * page + (page - 1);
+  // Calculate how many items to skip based on page number
+  const skip = (page - 1) * limit;
 
   const paginatedTasks = tasks.slice(skip, skip + limit);
 
